@@ -1,11 +1,18 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import 'bootstrap/dist/css/bootstrap.css';
+import './App.css';
+import { Home, About, Contact, Navigation } from './components';
+import { Route } from 'react-router-dom';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const App = () => (
+  <div>
+    <Route exact path = '/' component = {Home}/>
+    <Route path = '/about' component = {About}/>
+    <Route path = '/contact' component = {Contact}/>
+    <Navigation />
+  </div>
+);
 
+export default App;
 
 
 
